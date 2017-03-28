@@ -62,7 +62,7 @@ public class Carrito {
        
    }
    
-   public void opcion(){
+   public void eleccionusuario(){
     boolean respuesta;
     int opcionpagar=0;
     int opcioneditar=0;
@@ -87,7 +87,7 @@ public class Carrito {
         }
         if(opcionpagar==1){
             respuesta=true;
-            break;
+            
         }
     
     }    
@@ -109,16 +109,18 @@ public class Carrito {
             objeto1.sumar();
             
             acumulador=objeto1.sumar();
-            objeto1.setn1(acumulador);
+            objeto1.setn2(acumulador);
+            
                 
             }
       
         
-   return objeto1.getn1();     
+   return objeto1.getn2();     
    } 
  
    public int pago(){
        int dinero;
+       int vuelto;
        System.out.println("Ingrese dinero a cancelar");
        dinero=leer.nextInt();
        while(dinero<calculartotal()){
@@ -126,11 +128,10 @@ public class Carrito {
            dinero=leer.nextInt();
        }
        objeto1.setn1(dinero);
-       objeto1.setn2(calculartotal());
-       objeto1.restar();
-       objeto1.setn1(objeto1.restar());
+       vuelto=objeto1.restar();
+       
    
-    return objeto1.getn1();
+    return vuelto;
    }
 }
    
