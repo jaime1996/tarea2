@@ -17,10 +17,10 @@ public class Carrito {
        int posicionproducto;
        
        
-          System.out.println("Seleccione producto");
+          System.out.println("Ingrese posicion producto");
           posicionproducto=leer.nextInt();
         
-          System.out.println("Seleccione cantidad del producto");
+          System.out.println("Ingrese cantidad del producto");
           cantidad=leer.nextInt();  
           
           for(int j=0;j<cant.length;j++){
